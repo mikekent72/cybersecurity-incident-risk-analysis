@@ -1,0 +1,6 @@
+username,department,privileged,usual_country,usual_start_hour,usual_end_hour
+jsmith,Finance,False,UK,8,18
+agarcia,HR,False,UK,8,18
+admin01,IT,True,UK,8,18
+mthomas,Sales,False,UK,8,18
+lwilson,Operations,False,UK,7,17

@@ -8,7 +8,5 @@ __pycache__/
 
 .vscode/
 
-output/*
-
 .DS_Store
 Thumbs.db

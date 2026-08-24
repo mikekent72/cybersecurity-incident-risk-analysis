@@ -1,0 +1,4 @@
+incident_id,incident_type,severity,timestamp,source_ip,username,evidence
+INC-001,Brute-force authentication,High,2026-08-19 17:00:00,203.0.113.42,jsmith,14 failed login attempts against jsmith from 203.0.113.42 within 4 minutes.
+INC-002,Network port scanning,Medium,2026-08-20 19:00:00,198.51.100.20,,Source 198.51.100.20 contacted 13 distinct destination ports within 60 seconds.
+INC-003,Suspicious account activity,High,2026-08-21 11:17:00,203.0.113.10,admin01,Successful login for admin01 from 203.0.113.10. login originated from Germany instead of usual country UK.

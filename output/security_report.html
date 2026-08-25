@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cybersecurity Incident and Risk Analysis</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+            color: #222;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            margin-top: 30px;
+        }
+
+        .subtitle {
+            color: #555;
+            margin-top: 0;
+        }
+
+        .summary {
+            display: flex;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            padding: 15px 20px;
+            flex: 1;
+            text-align: center;
+        }
+
+        .number {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 9px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #f2f2f2;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            margin: 20px auto;
+        }
+
+        .methodology {
+            background: #f7f7f7;
+            padding: 15px 20px;
+        }
+
+        .note {
+            background: #f7f7f7;
+            padding: 12px 18px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Cybersecurity Incident and Risk Analysis</h1>
+
+<p class="subtitle">
+    Analysis of simulated security logs using rule-based incident
+    detection, incident investigation and qualitative cybersecurity
+    risk assessment.
+</p>
+
+
+<h2>1. Executive Summary</h2>
+
+<p>
+    Analysis of the simulated security logs identified
+    <strong>3 security incidents</strong>
+    from <strong>732 events</strong>.
+    2 incidents were assessed as Critical risk.
+    The remaining incident was assessed as Medium risk.
+</p>
+
+<p>
+    The highest-priority finding involved suspicious activity
+    affecting the privileged <strong>admin01</strong> account.
+    A separate brute-force attack showed repeated failed
+    authentication attempts followed by a successful login.
+    Network reconnaissance was also detected through rapid
+    probing
+    of multiple destination ports.
+</p>
+
+<p>
+    The analysis demonstrates an end-to-end cybersecurity workflow
+    covering security log analysis, incident detection,
+    investigation, risk assessment and mitigation recommendations.
+</p>
+
+
+<div class="summary">
+
+    <div class="card">
+        <div class="number">732</div>
+        Events analysed
+    </div>
+
+    <div class="card">
+        <div class="number">3</div>
+        Incidents detected
+    </div>
+
+    <div class="card">
+        <div class="number">2</div>
+        Critical risk
+    </div>
+
+    <div class="card">
+        <div class="number">1</div>
+        Medium risk
+    </div>
+
+</div>
+
+
+<h2>2. Dataset &amp; Methodology</h2>
+
+<div class="methodology">
+
+<p>
+    The project uses simulated authentication and network security
+    logs representing normal activity and deliberately injected
+    suspicious behaviour.
+</p>
+
+<p>
+    Deterministic detection rules identify three incident types:
+    brute-force authentication, suspicious account activity and
+    network port scanning.
+</p>
+
+<p>
+    Detected incidents are investigated using surrounding log
+    activity and user activity baselines. Each incident is then
+    assessed using a qualitative 5 x 5 risk matrix.
+</p>
+
+<p>
+    <strong>Risk score = Likelihood x Impact</strong>
+</p>
+
+<p>
+    Scores of 1-4 are classified as Low, 5-9 as Medium,
+    10-14 as High and 15-25 as Critical.
+</p>
+
+</div>
+
+
+<h2>3. Incident Overview</h2>
+
+<p>
+    The table below summarises the incidents identified during
+    the analysis and their resulting risk assessments.
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Incident Type</th>
+            <th>Risk Score</th>
+            <th>Risk Level</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        
+        <tr>
+            <td>INC-003</td>
+            <td>Suspicious account activity</td>
+            <td>20</td>
+            <td>Critical</td>
+        </tr>
+        
+        <tr>
+            <td>INC-001</td>
+            <td>Brute-force authentication</td>
+            <td>16</td>
+            <td>Critical</td>
+        </tr>
+        
+        <tr>
+            <td>INC-002</td>
+            <td>Network port scanning</td>
+            <td>6</td>
+            <td>Medium</td>
+        </tr>
+        
+    </tbody>
+</table>
+
+
+<h2>4. Incident Investigation</h2>
+
+<p>
+    Each detected incident was investigated using the available
+    log evidence and contextual information. The findings below
+    describe what the activity indicates and its potential
+    security implications.
+</p>
+
+
+        <section>
+            <h3>
+                INC-003 –
+                Suspicious account activity
+            </h3>
+
+            <p>
+                <strong>Finding:</strong>
+                A successful authentication for admin01 was observed from 203.0.113.10 at 11:17 from Germany rather than the user's usual UK location.
+            </p>
+
+            <p>
+                <strong>Security implication:</strong>
+                The authentication differs from the user's established baseline and may indicate compromised credentials or legitimate activity that requires verification.
+            </p>
+
+            <p>
+                <strong>Risk assessment:</strong>
+                Likelihood 4/5 ×
+                Impact 5/5 =
+                <strong>20/25
+                (Critical)</strong>.
+            </p>
+        </section>
+        
+        <section>
+            <h3>
+                INC-001 –
+                Brute-force authentication
+            </h3>
+
+            <p>
+                <strong>Finding:</strong>
+                14 failed authentication attempts were followed by a successful login for jsmith from 203.0.113.42.
+            </p>
+
+            <p>
+                <strong>Security implication:</strong>
+                The successful authentication following repeated failures provides evidence of a possible account compromise and requires further investigation.
+            </p>
+
+            <p>
+                <strong>Risk assessment:</strong>
+                Likelihood 4/5 ×
+                Impact 4/5 =
+                <strong>16/25
+                (Critical)</strong>.
+            </p>
+        </section>
+        
+        <section>
+            <h3>
+                INC-002 –
+                Network port scanning
+            </h3>
+
+            <p>
+                <strong>Finding:</strong>
+                Source 198.51.100.20 rapidly attempted connections to 13 distinct ports on a single destination host. No successful connections were observed.
+            </p>
+
+            <p>
+                <strong>Security implication:</strong>
+                The concentrated probing activity is consistent with network reconnaissance. An attacker could use this information to identify exposed services for subsequent targeting.
+            </p>
+
+            <p>
+                <strong>Risk assessment:</strong>
+                Likelihood 3/5 ×
+                Impact 2/5 =
+                <strong>6/25
+                (Medium)</strong>.
+            </p>
+        </section>
+        
+
+
+<h2>5. Risk Prioritisation</h2>
+
+<p>
+    Incidents were prioritised using their calculated risk scores.
+    The suspicious privileged-account activity represents the
+    highest-priority finding because compromise of a privileged
+    account could have severe consequences. The brute-force
+    incident is also Critical because repeated failed logins were
+    followed by a successful authentication. The port scan is
+    lower priority because no successful connections were observed.
+</p>
+
+<img
+    src="incident_risk_scores.png"
+    alt="Incident risk scores"
+>
+
+<img
+    src="risk_matrix.png"
+    alt="Security incident risk matrix"
+>
+
+
+<h2>6. Recommended Mitigations</h2>
+
+<p>
+    Mitigations are prioritised according to the assessed risk
+    associated with each incident. Higher-risk incidents receive
+    greater priority for remediation.
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Priority</th>
+            <th>Incident</th>
+            <th>Type</th>
+            <th>Recommended mitigation</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        
+        <tr>
+            <td>1</td>
+            <td>INC-003</td>
+            <td>Suspicious account activity</td>
+            <td>Require MFA for privileged accounts, verify the login with the account owner, review activity performed after authentication, restrict privileged access and monitor privileged account activity.</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>INC-001</td>
+            <td>Brute-force authentication</td>
+            <td>Enable MFA, implement rate limiting or account lockout controls, monitor repeated authentication failures and review the affected account for unauthorised activity.</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>INC-002</td>
+            <td>Network port scanning</td>
+            <td>Restrict unnecessary exposed services, apply firewall rules to limit network access, monitor repeated scanning activity and investigate whether the source was authorised.</td>
+        </tr>
+        
+    </tbody>
+</table>
+
+
+<h2>7. Limitations</h2>
+
+<ul>
+    <li>
+        The dataset is simulated and does not represent real
+        production security activity.
+    </li>
+
+    <li>
+        Detection uses deterministic rules rather than machine
+        learning or statistical anomaly detection.
+    </li>
+
+    <li>
+        Risk scores represent qualitative analyst judgement rather
+        than statistically calculated probabilities.
+    </li>
+
+    <li>
+        The available logs provide limited context compared with
+        a real security monitoring environment.
+    </li>
+</ul>
+
+
+</body>
+</html>

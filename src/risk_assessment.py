@@ -46,7 +46,7 @@ RISK_ASSESSMENTS = {
             "possible account compromise."
         ),
         "mitigations": (
-            "Enable multi-factor authentication (MFA), implement "
+            "Enable MFA, implement "
             "rate limiting or account lockout controls, monitor "
             "repeated authentication failures and review the "
             "affected account for unauthorised activity."

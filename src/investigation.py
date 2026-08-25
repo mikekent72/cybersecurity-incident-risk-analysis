@@ -125,9 +125,9 @@ def investigate_port_scan(events, incident):
     ]
 
     finding = (
-        f"Source {source_ip} attempted connections to "
-        f"{len(unique_ports)} distinct ports across "
-        f"{unique_hosts} destination host(s)."
+        f"Source {source_ip} rapidly attempted connections to "
+        f"{len(unique_ports)} distinct ports on a single "
+        f"destination host. No successful connections were observed."
     )
 
     implication = (
@@ -191,9 +191,9 @@ def investigate_suspicious_account(events, incident):
 
     finding = (
         f"A successful authentication for {username} was observed "
-        f"from {source_ip} at {timestamp.strftime('%H:%M')}. "
-        f"The login originated from {countries[0]}, "
-        f"rather than the user's usual country of the UK."
+        f"from {source_ip} at {timestamp.strftime('%H:%M')} "
+        f"from {countries[0]} rather than the user's usual "
+        f"UK location."
     )
 
     implication = (
